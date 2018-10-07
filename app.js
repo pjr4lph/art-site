@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 //route handlers
 app.use('/', indexRouter);
@@ -26,14 +26,6 @@ app.set('port', PORT);
 let server = app.listen(app.get('port'), () => {
     console.log( `server running at localhost:${PORT}` );
 });
-
-// what does this do? it looks like it always causes an error?
-//catch 404 HTTP error
-// app.use( function (request, response, next) {
-//     let err = new Error('Not Found')
-//     err.status = 404
-//     next(err)
-// })
 
 //error handler
 app.use(function (err, request, response , next) {

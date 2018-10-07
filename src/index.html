@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>ralph's art</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
   </head>
   <body>
     <table>
@@ -41,6 +41,6 @@
         </td>
       </tr>
     </table>
-    <script src="main.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>
