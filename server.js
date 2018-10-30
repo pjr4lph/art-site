@@ -3,19 +3,19 @@ const express = require('express');
 const app = express();
 
 //access file system
-const fs = require('fs');
+// const fs = require('fs');
 const path = require('path');
 
-// const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+// const cookieParser = require('cookie-parser');
+// const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index.js');
 const PORT = process.env.PORT || 3000;
+
+
 //middleware for request handling chain
-// app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //route handlers

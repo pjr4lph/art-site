@@ -1,3 +1,8 @@
 import "./scss/main.scss";
-console.log('hello world');
-console.log('hello world, 2');
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import App from './components/app.js';
+
+ReactDOM.render(<App />, document.getElementById('root'));
